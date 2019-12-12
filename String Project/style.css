@@ -1,0 +1,33 @@
+.wrap {
+  max-width: 500px;
+  margin: 30px auto 0;
+  box-shadow: 0 0 20px #ccc;
+  padding: 15px;
+  border-radius: 5px;
+}
+h4 {
+  margin-bottom: 10px;
+  font-size: 24px;
+}
+.wrap input[type='text'] {
+  width: calc(100% - 30px);
+  border: 1px solid #ddd;
+  padding: 10px;
+}
+.wrap textarea {
+  width: calc(100% - 15px);
+  min-height: 150px;
+  resize: none;
+  border: 1px solid #ddd;
+}
+
+.wrap input[type='submit'] {
+  border: 1px solid #000;
+  background: #000;
+  color: #ddd;
+  display: inline-block;
+  margin-top: 15px;
+  padding: 12px 20px;
+  border-radius: 5px;
+  font-size: 16px;
+}
