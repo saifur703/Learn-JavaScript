@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    />
+    <title>Weight Converter</title>
+
+    <style type="text/css">
+      body {
+        background: #333;
+        color: #fff;
+      }
+      .wrap {
+        margin-top: 30px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container wrap">
+      <div class="row">
+        <div class="col-md-6 offset-md-3">
+          <h1 class="display-4 text-center mb-3">Weight Converter</h1>
+
+          <form action="">
+            <div class="form-group">
+              <input
+                type="number"
+                id="wcinput"
+                placeholder="Enter Pounds"
+                class="form-control form-control-lg mb-2"
+              />
+              <input
+                type="submit"
+                value="Submit"
+                id="submit"
+                class="btn btn-success btn-lg btn-block mb-5"
+              />
+            </div>
+          </form>
+
+          <div class="output">
+            <div class="card bg-primary mb-2">
+              <div class="card-body">
+                <h4>Grams:</h4>
+                <div class="goutput"></div>
+              </div>
+            </div>
+
+            <div class="card bg-warning mb-2">
+              <div class="card-body">
+                <h4>Kilo Grams:</h4>
+                <div class="kgoutput"></div>
+              </div>
+            </div>
+
+            <div class="card bg-info">
+              <div class="card-body">
+                <h4>Ounces:</h4>
+                <div class="ozoutput"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script type="text/javascript">
+      let wcinput = document.querySelector('#wcinput');
+      let submit = document.querySelector('#submit');
+
+      document.querySelector('.output').style.visibility = 'hidden';
+
+      submit.addEventListener('click', function(e) {
+        e.preventDefault();
+
+        document.querySelector('.output').style.visibility = '';
+        let inputValue = wcinput.value;
+        if (!inputValue) {
+          alert('Please Enter any Number');
+          document.querySelector('.output').style.visibility = 'hidden';
+        }
+        document.querySelector('.goutput').innerHTML = inputValue / 0.0022046;
+        document.querySelector('.kgoutput').innerHTML = inputValue / 2.2046;
+        document.querySelector('.ozoutput').innerHTML = inputValue * 16;
+      });
+    </script>
+  </body>
+</html>
