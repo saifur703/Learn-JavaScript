@@ -1,0 +1,6 @@
+To Run This Project...
+
+1) Open Terminal
+2) Type "yarn"
+
+Make sure you have install Nodejs and NPM
